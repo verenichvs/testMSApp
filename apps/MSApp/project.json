@@ -1,0 +1,24 @@
+{
+  "name": "MSApp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/MSApp/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "MSApp:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "MSApp:build:development"
+        },
+        "production": {
+          "buildTarget": "MSApp:build:production"
+        }
+      }
+    }
+  }
+}

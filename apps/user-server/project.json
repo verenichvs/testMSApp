@@ -1,0 +1,24 @@
+{
+  "name": "user-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/user-server/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "user-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "user-server:build:development"
+        },
+        "production": {
+          "buildTarget": "user-server:build:production"
+        }
+      }
+    }
+  }
+}

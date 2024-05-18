@@ -35,7 +35,12 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/MSApp-e2e/**/*"]
+      "exclude": [
+        "apps/MSApp-e2e/**/*",
+        "apps/user-server-e2e/**/*",
+        "apps/post-server-e2e/**/*",
+        "apps/analyst-server-e2e/**/*"
+      ]
     }
   ],
   "nxCloudAccessToken": "MjZiM2IyYTAtMWY1Zi00ZDg1LWIyNjQtMjZhYWE4ODdiZTNifHJlYWQtd3JpdGU="

@@ -1,0 +1,24 @@
+{
+  "name": "post-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/post-server/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "post-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "post-server:build:development"
+        },
+        "production": {
+          "buildTarget": "post-server:build:production"
+        }
+      }
+    }
+  }
+}
